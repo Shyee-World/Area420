@@ -19,6 +19,11 @@
 
   <section id="banner"> 
 
+     
+<div id="menuBtn"> 
+  <img src="images/menu.png" alt="" id="menu">
+</div>
+
 <div class="wrapper fadeInDown">
   <div id="formContent">
     <!-- Tabs Titles -->
@@ -35,7 +40,7 @@
       <input type="text" id="password" class="fadeIn third" name="login" placeholder="Password">
       <input type="submit" class="fadeIn fourth" value="Log In">
     </form>
-
+    
     <!-- Remind Passowrd -->
     <div id="formFooter">
       <a class="underlineHover" href="register.html">New User? Create Account </a>
@@ -45,5 +50,29 @@
   </div>
 </div>
 </section>
+
+
+
+<script>
+  var menuBtn = document.getElementById("menuBtn")
+  var sidenav = document.getElementById("sidenav")
+  var menu = document.getElementById("menu")
+
+  sidenav.style.right = "-250px";
+
+  menuBtn.onclick = function() {
+  if (sidenav.style.right == "-250px") {
+      sidenav.style.right = "0";
+     
+      menu.src = "images/close.png"      
+
+  }
+  else {
+      sidenav.style.right = "-250px";
+      menu.src = "images/menu.jpg"
+  }
+}
+
+</script>
 </body>
 </html>
